@@ -1,0 +1,77 @@
+# Mod Loader License (ML-Fork-NC) v1.0
+
+Copyright (c) 2026 Pawmi
+
+## 1. Definitions
+
+"Software" means this mod loader, including its source code, compiled binaries, and all associated files.
+
+"Modified Version" means any version of the Software that has been altered, forked, or derived from the original.
+
+"Commercial Use" means any use intended for commercial advantage or monetary compensation, including but not limited to selling, licensing, sublicensing, or charging money for access to the Software.
+
+## 2. Permissions
+
+Subject to the conditions of this license, you are granted permission to:
+
+* use the Software for any purpose
+* study and modify the source code
+* create Modified Versions
+* distribute the Software in source or binary form
+* distribute Modified Versions in source or binary form
+
+## 3. Conditions
+
+All permissions granted under this license are subject to the following conditions:
+
+### 3.1 Attribution
+
+You must:
+
+* include a copy of this license in any distribution
+* retain all copyright notices
+* clearly credit the original author
+
+### 3.2 No Misrepresentation
+
+You must not:
+
+* claim that you are the original author of the Software
+* present the Software, or any Modified Version, as your own original work
+
+Modified Versions must be clearly marked as modified.
+
+### 3.3 Non-Commercial Restriction
+
+You must not:
+
+* sell the Software
+* sell Modified Versions of the Software
+* charge money for access to the Software
+* include the Software in any paid product or service where the Software itself is being monetized
+
+## 4. Allowed Commercial Activities
+
+The Non-Commercial Restriction **does NOT apply** to:
+
+* mods, plugins, or extensions created for the Software
+* content that depends on the Software but does not include its code
+
+You are allowed to monetize such mods/plugins independently.
+
+## 5. Termination
+
+This license is automatically terminated if you violate any of its terms.
+Upon termination, you must immediately cease all use and distribution of the Software.
+
+## 6. Disclaimer of Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+## 7. Limitation of Liability
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
+
+---
+
+End of License

@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <BepDLLs Include="$(MSBuildThisFileDirectory)..\_ProjectReferences\BepInEx\*.dll">
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
+    </BepDLLs>
+    <GameDLLs Include="$(MSBuildThisFileDirectory)..\_ProjectReferences\Game\*.dll">
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
+    </GameDLLs>
+    <UnityDLLs Include="$(MSBuildThisFileDirectory)..\_ProjectReferences\Unity\*.dll">
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
+    </UnityDLLs>
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <!-- BepInEx references -->
+    <Reference Include="@(BepDLLs)" />
+
+    <!-- Game references -->
+    <Reference Include="@(GameDLLs)" />
+
+    <!-- Unity references -->
+    <Reference Include="@(UnityDLLs)" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="11.0.0-preview.1.26104.118" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.5-beta1" />
+    <PackageReference Include="System.Text.Json" Version="10.0.5" />
+    <PackageReference Include="YamlDotNet" Version="16.3.0" />
+  </ItemGroup>
+
+</Project>

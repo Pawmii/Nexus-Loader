@@ -1,0 +1,5 @@
+/home/pawmi/RiderProjects/NexusLoader/NexusLoader/obj/Release/netstandard2.0/NexusLoader.csproj.AssemblyReference.cache
+/home/pawmi/RiderProjects/NexusLoader/NexusLoader/obj/Release/netstandard2.0/NexusLoader.GeneratedMSBuildEditorConfig.editorconfig
+/home/pawmi/RiderProjects/NexusLoader/NexusLoader/obj/Release/netstandard2.0/NexusLoader.AssemblyInfoInputs.cache
+/home/pawmi/RiderProjects/NexusLoader/NexusLoader/obj/Release/netstandard2.0/NexusLoader.AssemblyInfo.cs
+/home/pawmi/RiderProjects/NexusLoader/NexusLoader/obj/Release/netstandard2.0/NexusLoader.csproj.CoreCompileInputs.cache
