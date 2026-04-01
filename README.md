@@ -57,3 +57,5 @@ It is designed to be **modder-friendly**, but it is still in a **pre-alpha stage
 ---
 
 **Use only if you are comfortable with unstable builds and manual compilation.**
+
+![Alt](https://repobeats.axiom.co/api/embed/992e1a4854fb18d48ba54d23f8f5da25a682c096.svg "Repobeats analytics image")
