@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace NexusLoader;
 
 public static class Paths

@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexusLoader.ModPacker", "Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexusLoader.Updater", "NexusLoader.Updater\NexusLoader.Updater.csproj", "{B24A785A-755A-44E3-972B-D81861870304}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMod", "TestMod\TestMod.csproj", "{D211A695-F85D-4D37-8B95-8D4CD3D596FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B24A785A-755A-44E3-972B-D81861870304}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B24A785A-755A-44E3-972B-D81861870304}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B24A785A-755A-44E3-972B-D81861870304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D211A695-F85D-4D37-8B95-8D4CD3D596FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D211A695-F85D-4D37-8B95-8D4CD3D596FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D211A695-F85D-4D37-8B95-8D4CD3D596FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D211A695-F85D-4D37-8B95-8D4CD3D596FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace NexusLoader;
 
 public class Translation

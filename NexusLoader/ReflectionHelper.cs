@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace NexusLoader;
@@ -21,13 +24,16 @@ public static class ReflectionHelper
         return types.Where(t => t == targetType).Select(t => t as T);
     }
     
-    public static IEnumerable<T?> FindAllChilds<T>(Assembly assembly) where T : class
+    public static IEnumerable<T> FindAllChilds<T>(Assembly assembly) where T : class
     {
-        Type[] types = assembly.GetTypes();
-        
         Type baseType = typeof(T);
-        
-        return types.Where(t => !t.IsInterface && !t.IsInterface && baseType.IsAssignableFrom(t)).Select(t => t as T);
+
+        return assembly
+            .GetTypes()
+            .Where(t => !t.IsInterface &&
+                        !t.IsAbstract &&
+                        baseType.IsAssignableFrom(t))
+            .Select(t => (T)Activator.CreateInstance(t)!);
     }
     
     public static void SetFieldValue<TValue, TTarget>(string fieldName, TValue value, TTarget instance)

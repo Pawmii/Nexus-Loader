@@ -1,3 +1,5 @@
+using System;
+
 namespace NexusLoader.Crypt;
 
 public static class SHA256

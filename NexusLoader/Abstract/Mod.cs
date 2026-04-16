@@ -1,3 +1,4 @@
+using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
 using NexusLoader.Extensions;
@@ -34,6 +35,11 @@ public abstract class Mod<TConfig> : IMod where TConfig : IModConfig, new()
             Logger.LogInfoT("mod.config_not_found");
             
             Config = new TConfig();
+
+            string cfgDir = Path.GetDirectoryName(configPath)!;
+
+            if (!Directory.Exists(cfgDir))
+                Directory.CreateDirectory(cfgDir);
             
             File.WriteAllText(configPath, Yaml.SerializeObject(Config));
         }
@@ -55,8 +61,15 @@ public abstract class Mod<TConfig> : IMod where TConfig : IModConfig, new()
             Config = default!;
             return;
         }
+
+        string storagePath = Paths.GetModStoragePath(Prefix);
         
-        Database = new Database(Paths.GetModStoragePath(Prefix));
+        string storageDir = Path.GetDirectoryName(storagePath)!;
+
+        if (!Directory.Exists(storageDir))
+            Directory.CreateDirectory(storageDir);
+        
+        Database = new Database(storagePath);
         
         Logger.IsDebugEnabled[ModAssembly] = Config.Debug;
         

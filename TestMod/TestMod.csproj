@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+      <TargetFramework>netstandard2.1</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+
+      <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+      <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NexusLoader\NexusLoader.csproj" />
+    </ItemGroup>
+
+</Project>

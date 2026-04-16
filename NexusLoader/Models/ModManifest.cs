@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace NexusLoader.Models;
 
 public class ModManifest

@@ -1,7 +1,11 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Net.Http;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text.Json;
+using System.Threading.Tasks;
 using BepInEx;
 using BepInEx.Logging;
 using BepInEx.Unity.Mono;
@@ -77,29 +81,36 @@ public class Plugin : BaseUnityPlugin
         
         if (NexusConfig.AutoUpdate)
         {
-            string? updateFileName = null;
-            
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                updateFileName = "NexusUpdater.exe";
-            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                updateFileName = "NexusUpdater";
-            else
+            try
             {
-                NexusLoader.Logger.LogErrorT("general.invalid_os");
-            }
+                string? updateFileName = null;
             
-            if (updateFileName != null)
-            {
-                var latestVersion = await GetLatestVersionAsync("Pawmii", "Nexus-Loader");
-                
-                if (latestVersion != null && latestVersion > PluginInfo.PluginVersion)
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                    updateFileName = "NexusUpdater.exe";
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                    updateFileName = "NexusUpdater";
+                else
                 {
-                    NexusLoader.Logger.LogInfoT("updater.found_new_version");
-                    
-                    Process.Start(Path.Combine(Paths.GamePath, updateFileName));
-                    
-                    Environment.Exit(0);
+                    NexusLoader.Logger.LogErrorT("general.invalid_os");
                 }
+            
+                if (updateFileName != null)
+                {
+                    var latestVersion = await GetLatestVersionAsync("Pawmii", "Nexus-Loader");
+                
+                    if (latestVersion != null && latestVersion > PluginInfo.PluginVersion)
+                    {
+                        NexusLoader.Logger.LogInfoT("updater.found_new_version");
+                    
+                        Process.Start(Path.Combine(Paths.GamePath, updateFileName));
+                    
+                        Environment.Exit(0);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                NexusLoader.Logger.LogErrorT("loader.cant_update", e);
             }
         }
         
